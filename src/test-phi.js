@@ -1,0 +1,1 @@
+export async function runPhiTest(name,fn){const startedAt=new Date().toISOString();try{const value=await fn();return {name,ok:true,value,startedAt,finishedAt:new Date().toISOString()};}catch(error){return {name,ok:false,error:String(error?.message||error),startedAt,finishedAt:new Date().toISOString()};}}
